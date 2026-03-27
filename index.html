@@ -8,7 +8,13 @@
 
 <body>
     <div class="appWrapper">
-        <div id="tasksZone"></div>
+        <div id="tasksZone">
+            <div class="taskItem">
+                <p>Enter password</p>
+                <button class="taskItem deleteTaskButton" onclick="this.parentElement.remove()"
+                    title="Delete task">×</button>
+            </div>
+        </div>
         <div class="formWrapper">
             <form id="newTaskForm">
                 <input name="input" placeholder="Enter Task" autocomplete="off">

@@ -3,7 +3,7 @@
 
 <head>
     <link rel="stylesheet" href="./style.css">
-    <script type="module" defer src="./script.js"></script>
+    <script defer src="./script.js"></script>
 </head>
 
 <body>
@@ -18,7 +18,7 @@
                         <span class="unfinishedTaskContent">----- Task Name -----</span>
                     </p>
                 </div>
-                <button class="taskItem deleteTaskButton" onclick="this.parentElement.remove()"
+                <button class="taskItem deleteTaskButton" onclick="this.parentElement.remove();tasks--;"
                     title="Delete task">×</button>
             </div>
         </div>

@@ -25,6 +25,14 @@ document.getElementById("newTaskForm").addEventListener("submit", function (e) {
     }
     document.getElementById("newTaskForm").querySelector("input[name='input']").value = "";
 });
+setInterval(function () {
+    if (tasks <= 0) {
+        tasks = 0;
+        document.getElementById("noTask").style.display = "flex";
+    } else {
+        document.getElementById("noTask").style.display = "none";
+    }
+});
 window.addEventListener("beforeunload", function (e) {
     if (tasks > 0) {
         e.preventDefault();

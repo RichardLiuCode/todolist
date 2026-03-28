@@ -21,10 +21,17 @@
                 <button class="taskItem deleteTaskButton" onclick="this.parentElement.remove();tasks--;"
                     title="Delete task">×</button>
             </div>
+            <div id="noTask">
+                <div style="display:revert">
+                    <h1 style="font-size:32px;">You don't have any task right now!</h1>
+                    <br>
+                    <p style="font-size:16px;">All your tasks will show here.</p>
+                </div>
+            </div>
         </div>
         <div class="formWrapper">
             <form id="newTaskForm">
-                <input name="input" placeholder="Enter Task" autocomplete="off">
+                <input name="input" placeholder="Add a Task" autocomplete="off">
                 <input name="submitBtn" type="submit" value="Add Task">
             </form>
         </div>

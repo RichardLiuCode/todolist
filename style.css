@@ -22,6 +22,14 @@ body {
     position: relative;
 }
 
+.appTitle {
+    font-family: arial;
+    font-size: 35px;
+    color: blue;
+    padding-top: 10px;
+    text-align: center;
+}
+
 .formWrapper {
     position: absolute;
     bottom: 10px;
@@ -84,14 +92,22 @@ body {
 
 #tasksZone {
     position: absolute;
-    top: 10px;
+    top: 60px;
     left: 0px;
     width: 600px;
-    height: calc(100% - 70px);
+    height: calc(100% - 130px);
     background: none;
     border: none;
     display: revert;
     overflow-y: auto;
+}
+
+#tasksZone::-webkit-scrollbar {
+    display: none;
+}
+
+#taskItemElement {
+    display: none;
 }
 
 .taskItem {
@@ -102,7 +118,8 @@ body {
     border-color: white;
     border-style: solid;
     border-radius: 10px;
-    position: absolute;
+    margin-bottom: 10px;
+    position: relative;
 }
 
 .taskItem.deleteTaskButton {
@@ -123,4 +140,43 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 1000px;
+}
+
+.taskItem.contentWrapper {
+    background: none;
+    border: none;
+    border-radius: 0px;
+    width: 500px;
+    height: 30px;
+    position: absolute;
+    left: 50px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.taskItem.content {
+    background: none;
+    border: none;
+    border-radius: 0px;
+    height: fit-content;
+    width: fit-content;
+    padding: none;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: arial;
+    overflow-x: auto;
+    color: black;
+}
+
+
+.taskItem.checkbox {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 20px;
+    height: 20px;
 }
